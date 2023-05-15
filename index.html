@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Time Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="icon" type="image/png" href="./favicon.ico">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="icon" type="image/png" href="./favicon.ico" />
   </head>
 
   <body>
@@ -17,11 +22,13 @@
     </header>
     <div class="container">
       <input type="text" id="timeInput" placeholder="Enter hours and minutes" />
-      <button onclick="addTime()">Add Time</button>
-      <button onclick="resetTime()">Reset</button>
+      <button id="addButton" onclick="addTime()">Add Time</button>
+      <button id="resetButton" onclick="resetTime()">Reset</button>
       <div id="flashcard">
         <span id="totalTime"></span>
+  
       </div>
+      <p id="timestamp">Last added:</p>
     </div>
 
     <script src="script.js"></script>
