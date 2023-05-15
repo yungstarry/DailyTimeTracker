@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Tracker</title>
+    <style>
+      .container {
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      #flashcard {
+        
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 30px auto;
+        font-size: 2rem;
+        background-color: bisque;
+        width: 40rem;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 50%;
+        font-weight: 900;
+      }
+      input {
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        background-color: rgb(183, 182, 182);
+        
+        
+      }
+      
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      header {
+  
+  color: #6d5555;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+    margin: 0;
+    
+  font-size: 2.5rem;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>Daily Time Tracker</h1>
+        <small>for single event</small>
+    </header>
+    <div class="container">
+      <input type="text" id="timeInput" placeholder="Enter hours and minutes" />
+      <button onclick="addTime()">Add Time</button>
+      <button onclick="resetTime()">Reset</button>
+      <div id="flashcard">
+        <span id="totalTime"></span>
+      </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
