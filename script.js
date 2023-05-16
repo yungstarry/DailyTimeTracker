@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
         minutes: totalMinutes,
         timestamp: timestamp,
       };
-
+animateFlashcard()
       saveTotalTime(updatedTotalTime);
       updateTimeDisplay(updatedTotalTime);
     }
@@ -64,4 +64,29 @@ window.addEventListener("load", function () {
     totalTimeSpan.textContent = `Total Time: ${totalTime.hours} hours ${totalTime.minutes} minutes`;
     timestampSpan.textContent = `Last added: ${totalTime.timestamp}`;
   }
+});
+
+// const flashcard = document.getElementById("flashcard");
+// function animateFlashcard() {
+//   flashcard.style.backgroundColor = "lightgreen";
+//   flashcard.style.transform = "scale(1.1)";
+//   setTimeout(() => {
+//     flashcard.style.backgroundColor = "bisque";
+//     flashcard.style.transform = "scale(1)";
+//   }, 10000);
+// }
+
+function animateFlashcard() {
+  flashcard.classList.add("animate");
+
+  // Remove the 'animate' class after animation ends
+  flashcard.addEventListener("animationend", () => {
+    flashcard.classList.remove("animate");
+  });
+}
+
+// Call the animateFlashcard() function after adding the hours
+addButton.addEventListener("click", () => {
+  addTime();
+  animateFlashcard();
 });
