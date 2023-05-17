@@ -170,17 +170,10 @@ function addTaskToDOM(task) {
   taskItem.appendChild(theCheckbox);
   taskItem.appendChild(label);
   taskItem.appendChild(createDeleteIcon());
+  list.appendChild(taskItem);
 
   // Add animation class to the newly added taskItem
   taskItem.classList.add("animate");
-
-  // Insert the taskItem at the top of the list
-  const firstTask = list.firstChild;
-  if (firstTask) {
-    list.insertBefore(taskItem, firstTask);
-  } else {
-    list.appendChild(taskItem);
-  }
 
   // Remove animation class after animation duration
   setTimeout(() => {
@@ -196,9 +189,6 @@ function createElement(tagName, attribute = null) {
   }
   return node;
 }
-
-// Rest of the code remains unchanged...
-
 
 function createDeleteIcon() {
   const deleteIcon = createElement("i", [
