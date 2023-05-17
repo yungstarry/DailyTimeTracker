@@ -13,6 +13,10 @@
       href="./favicon-16x16.png"
     />
     <link rel="icon" type="image/png" href="./favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -26,11 +30,49 @@
       <button id="resetButton" onclick="resetTime()">Reset</button>
       <div id="flashcard">
         <span id="totalTime"></span>
-  
       </div>
       <p id="timestamp">Last added:</p>
-    </div>
+      <br />
+      <br /><br />
+      <br />
 
+      <h1 tabindex="-1" id="heading">To Do List</h1>
+      <div class="content">
+        <form action="index.html" method="post" id="to_do_form">
+          <label for="todo" id="main_label"
+            >Add a new task to your list (required)</label
+          >
+          <div>
+            <input
+              placeholder="Press Enter to add list"
+              type="text"
+              class="task_input"
+              aria-describedby="example"
+              id="todo"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <!-- <input type="submit" value="Add" class="add_task" /> -->
+      <div>
+        <ul id="list" class="list"></ul>
+        <div
+          role="status"
+          aria-live="polite"
+          id="sc_feedback"
+          class="sc_feedback"
+        >
+          <!-- Area to be pronounceable by screen readers -->
+        </div>
+      </div>
+    </div>
+    <!-- to do list -->
+    <!-- <div class="container">
+        
+    </div> -->
+
+    <div style="height: 9999px"></div>
     <script src="script.js"></script>
   </body>
 </html>
